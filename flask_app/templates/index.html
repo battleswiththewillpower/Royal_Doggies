@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boot strap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style-home-dog.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dog Fostering</title>
+</head>
+
+
+<body>
+
+    <nav class="nav-bar" id="myNavbar">
+
+        <div class="header nav-bar">
+            <h1 class="header" onclick="window.location.href='/'"> Royal<span id="word-color"> Doggies </span></h1>
+
+        </div>
+
+        <div class="header-links " id="myNavbar">
+
+            <a class="link0" class="active" href="/">Home</a>
+            <a class="link3" href="/brooklyn">Brooklyn</a>
+            <a class="link1" href="/bella">Success Stories</a>
+            <a class="link2" href="">Videos</a>
+            <a class="link4" href="/new">Contact</a>
+
+
+
+        </div>
+
+    </nav>
+
+    <div class="container top-design">
+
+       
+            <img class="intro" src="{{ url_for('static', filename='img/intro-home.png') }}" alt="">
+            <img id="animated-text" class="word-photo" src="{{ url_for('static', filename='img/words.png') }}" alt="">
+            <img class="bottom-intro" src="{{ url_for('static', filename='img/adopt-req.png') }}" alt="">
+
+       
+
+    </div>
+
+    <footer id="footer">
+        
+            <a class="header" id="royal" href="/"><h1>Royal<span id="word-color"> Doggies </span></h1></a>
+            <!-- <p class="">Unite a bundle of joy to a new home!</p> -->
+        
+            <!-- PASS VALIDATION -->
+        <div class="subscribe-bar">
+            <!-- FIX THE CONNECTION TO THE DATABASE-- MAYBE ONE TO ONE RELATONSHIP -->
+            <form action='/email/create' method='post'>
+                
+                <input class="subscribe" type="text" placeholder=" Email address" name="email" >
+                <label>
+                    {% for message in get_flashed_messages(category_filter=['err_email']) %} 
+                    <p>{{ message }}</p>
+                    {% endfor %}<br>
+                <input type="hidden" name="doggie_id" id="doggie_id" value="doggie_id">
+                <input class="sub-btn" type="submit" value="Subscribe">
+            </form>
+        </div>
+
+        
+        
+        <a class="admin-link" href="/sign">User Signin</a>
+        <a class="admin-link" href="/admin">Admin Signin</a>
+         <!-- <a class="admin-link" href="/">Ashleys Page</a> -->
+       
+
+
+      </footer>
+
+
+
+
+    <!-- JS SCCIPT LINK -->
+    <script src="{{ url_for('static', filename='js/home-page.js') }}"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

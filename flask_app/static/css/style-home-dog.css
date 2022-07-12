@@ -1,0 +1,177 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Copperplate;
+  
+}
+body {
+    background-color: gold;
+}
+
+.container {
+  margin: 0 auto;
+  
+}
+
+/* give nav bar a boarder add definition */
+.nav-bar {
+  background-color: rgba(247,193,227,255);
+  border-radius: 5px;
+  
+  margin: auto 0px;
+
+  font-size: 120%;
+
+  height: 100px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+}
+
+
+
+  .header-links a:hover {
+    background-color: #8dace5;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .header {
+    margin-left: 20px;
+    cursor: pointer;
+    
+  }
+
+  
+  #word-color {
+      color: #573c65;
+  }
+  
+  .link1 {
+    margin-left: 30px;
+  }
+  
+  .link0 ,.link1, .link2, .link3, .link4 {
+    margin-right: 80px;
+    text-decoration: none;
+    color: #302833;
+    
+    margin-left: 60px;
+    
+  }
+  
+ 
+  .top-design  {
+
+
+  }
+
+
+  .intro{
+    position: relative;
+    z-index: 1;
+
+  }
+
+  .word-photo {
+    font-size: 1.366rem;
+    text-transform: uppercase;
+    animation: fadeIn linear 5s;
+  -webkit-animation: fadeIn linear 5s;
+  -moz-animation: fadeIn linear 5s;
+  -o-animation: fadeIn linear 5s;
+  -ms-animation: fadeIn linear 5s;
+  }
+
+
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+
+
+  .word-photo {
+    position: relative;
+    z-index: 2;
+    bottom: 705px;
+    margin-bottom: -600px;
+    left: 70px;
+    /* overflow: visible;
+    height: 0; */
+
+  }
+
+
+
+
+  .bottom-intro {
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 8px 2px #888888;
+  }
+
+  #footer {
+    background-color: #f7c1e3;
+    color: #302833;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+     width: 100%;
+    padding: 20px 0px;
+  }
+
+  #royal {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .admin-link {
+    color: #302833;
+    font-size: smaller;
+  }
+
+  .subscribe {
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-top-radius: 80px;
+    border-bottom-radius: 80px;
+    background-color: #f7c1e3;
+    border: 3px solid #8dace5;
+    border-right: none;
+    padding: 2px;
+  }
+
+  .sub-btn {
+    padding: 6px 70px;
+    border-top-left-radius: 80px; 
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    background-color: #8dace5;
+    border: none;
+    margin-left: -25px;
+  }
